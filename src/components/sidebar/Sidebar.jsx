@@ -15,17 +15,26 @@ import {
   Storefront
 } from '@mui/icons-material';
 
+import { Link, NavLink } from 'react-router-dom';
+
 export default function Sidebar() {
+  const isActive = ({ isActive }) => {
+    console.log(isActive);
+    return isActive ? 'active' : undefined;
+  };
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon " />
-              Home
-            </li>
+            <NavLink to="/" className={isActive}>
+              <li className="sidebarListItem">
+                <LineStyle className="sidebarIcon " />
+                Home
+              </li>
+            </NavLink>
+
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
@@ -39,10 +48,13 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <PersonOutline className="sidebarIcon" />
-              Users
-            </li>
+            <NavLink to="/users" className={isActive}>
+              <li className="sidebarListItem">
+                <PersonOutline className="sidebarIcon" />
+                Users
+              </li>
+            </NavLink>
+
             <li className="sidebarListItem">
               <Storefront className="sidebarIcon" />
               Products

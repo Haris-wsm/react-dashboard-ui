@@ -22,6 +22,11 @@
   list-style: none;
   padding: 5px;
 }
+.sidebarList a,
+.sidebarList a:active {
+  text-decoration: none;
+  color: inherit;
+}
 .sidebarListItem {
   padding: 5px;
   cursor: pointer;
@@ -30,8 +35,11 @@
   border-radius: 10px;
 }
 
-.sidebarListItem.active,
 .sidebarListItem:hover {
+  background: rgb(234, 234, 248);
+}
+
+.active .sidebarListItem {
   background: rgb(234, 234, 248);
 }
 

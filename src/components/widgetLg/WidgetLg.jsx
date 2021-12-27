@@ -6,7 +6,7 @@ export default function WidgetLg() {
   };
   return (
     <div className="widgetLg">
-      <div className="widgetLgTitle">Lastet transactions</div>
+      <div className="widgetLgTitle">Lastest Transactions</div>
       <table className="widgetLgTable">
         <tr className="widgetLgTr">
           <th className="widgetLgTh">Customer</th>
