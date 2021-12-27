@@ -1,12 +1,12 @@
 import './userList.css';
 import { DataGrid } from '@mui/x-data-grid';
-import { userRow } from '../../dummy';
+import { userRows } from '../../dummy';
 import { useState } from 'react';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 import { Link } from 'react-router-dom';
 export default function UserList() {
-  const [data, setdata] = useState(userRow);
+  const [data, setdata] = useState(userRows);
 
   const column = [
     { field: 'id', headerName: 'ID', width: 90 },

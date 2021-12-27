@@ -15,13 +15,11 @@ import {
   Storefront
 } from '@mui/icons-material';
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Sidebar() {
-  const isActive = ({ isActive }) => {
-    console.log(isActive);
-    return isActive ? 'active' : undefined;
-  };
+  const isActive = ({ isActive }) => (isActive ? 'active' : undefined);
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -54,11 +52,13 @@ export default function Sidebar() {
                 Users
               </li>
             </NavLink>
+            <NavLink to="/products" className={isActive}>
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Products
+              </li>
+            </NavLink>
 
-            <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
-              Products
-            </li>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions
